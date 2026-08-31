@@ -1,0 +1,2666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dr. Saurabh Prakash | Healthcare & Medical Care</title>
+
+    <meta name="description"
+        content="Dr. Saurabh Prakash provides professional, compassionate and patient-focused healthcare with personalized consultation and medical guidance.">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #17324d;
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        :root {
+            --primary: #075a87;
+            --primary-dark: #063b5b;
+            --secondary: #0b739f;
+            --light: #eef9fc;
+            --lighter: #f7fcfe;
+            --text: #17324d;
+            --muted: #718292;
+            --border: #e2edf1;
+        }
+
+        .container {
+            max-width: 1180px;
+        }
+
+
+        /* =====================================================
+           TOP BAR
+        ===================================================== */
+
+        .top-bar {
+            background: var(--primary-dark);
+            color: #ffffff;
+            padding: 9px 0;
+            font-size: 11px;
+        }
+
+        .top-bar-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-left,
+        .top-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .top-bar i {
+            margin-right: 5px;
+        }
+
+
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
+
+        .main-navbar {
+            background: #ffffff;
+            padding: 17px 0;
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 999;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+        }
+
+        .brand-icon {
+            width: 47px;
+            height: 47px;
+            border: 2px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary);
+            font-size: 23px;
+        }
+
+        .brand-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .brand-subtitle {
+            display: block;
+            font-size: 8px;
+            letter-spacing: 1.3px;
+            color: #768692;
+            margin-top: 3px;
+        }
+
+        .navbar-nav {
+            gap: 25px;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--text);
+            font-size: 12px;
+            font-weight: 500;
+            padding: 8px 0;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--primary);
+        }
+
+        .appointment-btn {
+            background: var(--primary);
+            color: #ffffff !important;
+            padding: 11px 20px !important;
+            border-radius: 4px;
+        }
+
+        .appointment-btn:hover {
+            background: var(--primary-dark);
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        .hero {
+            position: relative;
+            min-height: 650px;
+            overflow: hidden;
+            background:
+                linear-gradient(
+                    110deg,
+                    #f8fdff 0%,
+                    #eef9fc 52%,
+                    #dceff6 100%
+                );
+        }
+
+        /* Background circles */
+
+        .hero-circle {
+            position: absolute;
+            border: 2px solid rgba(45, 137, 179, 0.11);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .circle-one {
+            width: 700px;
+            height: 700px;
+            left: -360px;
+            top: -210px;
+        }
+
+        .circle-two {
+            width: 850px;
+            height: 850px;
+            right: -470px;
+            top: -250px;
+        }
+
+        .circle-three {
+            width: 500px;
+            height: 500px;
+            right: 240px;
+            bottom: -410px;
+        }
+
+        .circle-four {
+            width: 330px;
+            height: 330px;
+            left: 38%;
+            bottom: -250px;
+        }
+
+        /* Medical plus signs */
+
+        .medical-plus {
+            position: absolute;
+            color: rgba(7, 90, 135, 0.10);
+            font-size: 65px;
+            font-weight: 300;
+            pointer-events: none;
+        }
+
+        .plus-one {
+            right: 7%;
+            top: 110px;
+        }
+
+        .plus-two {
+            left: 7%;
+            bottom: 80px;
+        }
+
+        .plus-three {
+            right: 42%;
+            bottom: 50px;
+            font-size: 45px;
+        }
+
+
+        /* Hero content */
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            padding: 110px 0 110px;
+            max-width: 650px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: #e2f4f9;
+            color: var(--primary);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            margin-bottom: 21px;
+        }
+
+        .hero-title {
+            font-size: 61px;
+            line-height: 1.06;
+            font-weight: 700;
+            color: #112f4b;
+            margin-bottom: 22px;
+        }
+
+        .hero-title span {
+            color: var(--primary);
+        }
+
+        .hero-description {
+            max-width: 590px;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-main {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: #ffffff;
+            padding: 14px 23px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .btn-main:hover {
+            color: #ffffff;
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: #ffffff;
+            color: var(--primary);
+            border: 1px solid var(--primary);
+            padding: 14px 23px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+            transition: 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: #ffffff;
+        }
+
+
+        /* =====================================================
+           HERO DOCTOR IMAGE
+        ===================================================== */
+
+        .hero-doctor-area {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 51%;
+            height: 100%;
+            z-index: 5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .doctor-bg-circle {
+            position: absolute;
+            width: 580px;
+            height: 580px;
+            background: rgba(255, 255, 255, 0.65);
+            border-radius: 50%;
+            bottom: -180px;
+            right: 60px;
+        }
+
+        .doctor-bg-ring {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border: 1px solid rgba(7, 90, 135, 0.10);
+            border-radius: 50%;
+            bottom: -190px;
+            right: 50px;
+        }
+
+        .doctor-image {
+            position: relative;
+            z-index: 5;
+            width: 450px;
+            height: 530px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 240px 240px 0 0;
+            box-shadow: 0 20px 55px rgba(12, 74, 105, 0.12);
+        }
+
+
+        /* =====================================================
+           TRUST CARDS
+        ===================================================== */
+
+        .trust-section {
+            position: relative;
+            z-index: 20;
+            margin-top: -48px;
+        }
+
+        .trust-box {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 5px;
+            box-shadow: 0 15px 40px rgba(10, 65, 90, 0.08);
+            overflow: hidden;
+        }
+
+        .trust-item {
+            min-height: 112px;
+            padding: 22px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-right: 1px solid var(--border);
+        }
+
+        .trust-item:last-child {
+            border-right: none;
+        }
+
+        .trust-icon {
+            min-width: 50px;
+            width: 50px;
+            height: 50px;
+            background: var(--light);
+            border-radius: 50%;
+            color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+        }
+
+        .trust-item h5 {
+            font-size: 13px;
+            color: #173b57;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .trust-item p {
+            color: #778694;
+            font-size: 10px;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           COMMON SECTION
+        ===================================================== */
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            color: var(--primary);
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            margin-bottom: 13px;
+        }
+
+        .section-title {
+            color: #13324e;
+            font-size: 39px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 19px;
+        }
+
+        .section-text {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.9;
+        }
+
+
+        /* =====================================================
+           ABOUT
+        ===================================================== */
+
+        .about-section {
+            background: #ffffff;
+        }
+
+        .about-image-wrapper {
+            position: relative;
+            padding-right: 35px;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 475px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 5px;
+        }
+
+        .experience-box {
+            position: absolute;
+            right: 0;
+            bottom: 25px;
+            background: var(--primary);
+            color: #ffffff;
+            padding: 20px;
+            width: 165px;
+        }
+
+        .experience-box strong {
+            display: block;
+            font-size: 22px;
+            margin-bottom: 4px;
+        }
+
+        .experience-box span {
+            font-size: 10px;
+        }
+
+        .about-content {
+            padding-left: 35px;
+        }
+
+        .about-content .btn-main {
+            margin-top: 15px;
+        }
+
+
+        /* =====================================================
+           SERVICES
+        ===================================================== */
+
+        .services-section {
+            background: #f6fbfd;
+        }
+
+        .center-heading {
+            max-width: 720px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .service-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            padding: 30px 25px;
+            height: 100%;
+            transition: 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 15px 35px rgba(15, 80, 105, 0.10);
+        }
+
+        .service-icon {
+            width: 55px;
+            height: 55px;
+            background: var(--light);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 23px;
+            margin-bottom: 19px;
+        }
+
+        .service-card h4 {
+            font-size: 16px;
+            color: #173c57;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           APPROACH
+        ===================================================== */
+
+        .approach-image {
+            width: 100%;
+            height: 490px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 5px;
+        }
+
+        .approach-list {
+            margin-top: 28px;
+        }
+
+        .approach-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 21px;
+        }
+
+        .approach-icon {
+            min-width: 46px;
+            width: 46px;
+            height: 46px;
+            background: var(--light);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .approach-item h5 {
+            font-size: 14px;
+            color: #173c57;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .approach-item p {
+            font-size: 11px;
+            line-height: 1.7;
+            color: var(--muted);
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           WHY CHOOSE US
+        ===================================================== */
+
+        .why-section {
+            background: #f6fbfd;
+        }
+
+        .why-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            padding: 30px 25px;
+            height: 100%;
+        }
+
+        .why-card-icon {
+            color: var(--primary);
+            font-size: 29px;
+            margin-bottom: 17px;
+        }
+
+        .why-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #173c57;
+            margin-bottom: 9px;
+        }
+
+        .why-card p {
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+
+        /* =====================================================
+           CTA BLUE
+        ===================================================== */
+
+        .blue-cta {
+            padding: 90px 0;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(110deg, #063b5b, #075a87);
+            color: #ffffff;
+        }
+
+        .blue-cta::before {
+            content: "";
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            right: -250px;
+            top: -260px;
+        }
+
+        .blue-cta::after {
+            content: "";
+            position: absolute;
+            width: 350px;
+            height: 350px;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 50%;
+            left: -170px;
+            bottom: -200px;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-label {
+            color: #aee5ef;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            margin-bottom: 14px;
+        }
+
+        .blue-cta h2 {
+            font-size: 41px;
+            line-height: 1.2;
+            font-weight: 700;
+            margin-bottom: 17px;
+        }
+
+        .blue-cta p {
+            color: #d6e9ef;
+            max-width: 710px;
+            font-size: 12px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+        }
+
+        .white-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #ffffff;
+            color: var(--primary);
+            padding: 13px 23px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .white-btn:hover {
+            color: var(--primary-dark);
+        }
+
+
+        /* =====================================================
+           PHILOSOPHY
+        ===================================================== */
+
+        .philosophy-section {
+            text-align: center;
+            background: #ffffff;
+        }
+
+        .quote-icon {
+            color: var(--primary);
+            font-size: 48px;
+            line-height: 1;
+        }
+
+        .quote-text {
+            max-width: 800px;
+            margin: 18px auto;
+            color: #183b56;
+            font-size: 24px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+
+        /* =====================================================
+           FAQ
+        ===================================================== */
+
+        .faq-section {
+            background: #f6fbfd;
+        }
+
+        .accordion-item {
+            border: 1px solid var(--border) !important;
+            margin-bottom: 10px;
+            border-radius: 4px !important;
+            overflow: hidden;
+        }
+
+        .accordion-button {
+            color: #173b56;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 18px;
+            box-shadow: none !important;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: #e8f6fa;
+            color: var(--primary);
+        }
+
+        .accordion-body {
+            color: var(--muted);
+            font-size: 11px;
+            line-height: 1.8;
+            background: #ffffff;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            background: #062f47;
+            color: #a9c1ca;
+            padding-top: 65px;
+        }
+
+        .footer-brand {
+            color: #ffffff;
+            font-size: 21px;
+            font-weight: 700;
+            margin-bottom: 13px;
+        }
+
+        .footer-about {
+            max-width: 340px;
+            font-size: 11px;
+            line-height: 1.9;
+        }
+
+        .footer-title {
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 17px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #a9c1ca;
+            font-size: 11px;
+        }
+
+        .footer-links a:hover {
+            color: #ffffff;
+        }
+
+        .footer-contact {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-contact li {
+            display: flex;
+            gap: 9px;
+            margin-bottom: 12px;
+            font-size: 11px;
+        }
+
+        .footer-contact i {
+            color: #6bd1df;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 9px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            width: 34px;
+            height: 34px;
+            border: 1px solid rgba(255,255,255,.15);
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            transition: .3s;
+        }
+
+        .social-links a:hover {
+            background: #ffffff;
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            margin-top: 45px;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,.08);
+            font-size: 10px;
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+        ===================================================== */
+
+        @media (max-width: 1199px) {
+
+            .hero-title {
+                font-size: 53px;
+            }
+
+            .doctor-image {
+                width: 400px;
+                height: 500px;
+            }
+
+        }
+
+
+        @media (max-width: 991px) {
+
+            .top-right {
+                display: none;
+            }
+
+            .top-left {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .navbar-nav {
+                gap: 5px;
+                padding-top: 18px;
+            }
+
+            .appointment-btn {
+                display: inline-block;
+                margin-top: 5px;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-content {
+                padding: 80px 0 110px;
+                max-width: 100%;
+            }
+
+            .hero-title {
+                font-size: 48px;
+            }
+
+            .hero-doctor-area {
+                display: none;
+            }
+
+            .trust-section {
+                margin-top: 0;
+                padding-top: 25px;
+            }
+
+            .trust-item {
+                border-bottom: 1px solid var(--border);
+            }
+
+            .trust-item:nth-child(2n) {
+                border-right: none;
+            }
+
+            .about-content {
+                padding-left: 0;
+                margin-top: 45px;
+            }
+
+            .about-image-wrapper {
+                padding-right: 0;
+            }
+
+        }
+
+
+        @media (max-width: 767px) {
+
+            .top-bar {
+                font-size: 10px;
+            }
+
+            .top-left span:last-child {
+                display: none;
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .hero-content {
+                padding: 65px 0 80px;
+            }
+
+            .hero-title {
+                font-size: 39px;
+            }
+
+            .hero-description {
+                font-size: 12px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-buttons a {
+                text-align: center;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .about-image {
+                height: 390px;
+            }
+
+            .approach-image {
+                height: 390px;
+            }
+
+            .blue-cta {
+                padding: 70px 0;
+            }
+
+            .blue-cta h2 {
+                font-size: 31px;
+            }
+
+            .quote-text {
+                font-size: 20px;
+            }
+
+        }
+
+
+        @media (max-width: 575px) {
+
+            .brand-title {
+                font-size: 17px;
+            }
+
+            .brand-subtitle {
+                font-size: 7px;
+            }
+
+            .brand-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .hero-title {
+                font-size: 35px;
+            }
+
+            .about-image {
+                height: 340px;
+            }
+
+            .approach-image {
+                height: 340px;
+            }
+
+            .experience-box {
+                right: 10px;
+            }
+
+        }
+
+        li a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Contact Information */
+span a {
+    color: #333;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+span a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
+span a:hover {
+    color: #fff !important;
+}
+
+span a i {
+    color: #fff !important;
+}
+
+span a {
+    color: #fff;
+    text-decoration: none;
+}
+
+span a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+span a i {
+    margin-right: 6px;
+}
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+<div class="top-bar">
+
+    <div class="container">
+
+        <div class="top-bar-inner">
+
+            <div class="top-left">
+
+                <span>
+                    <i class="bi bi-geo-alt"></i>
+                    New Delhi, India
+                </span>
+
+               <span>
+    <a href="tel:+919910295721">
+        <i class="bi bi-telephone"></i>
+        +91 9910295721
+    </a>
+</span>
+
+                <span>
+                    <i class="bi bi-envelope"></i>
+                   <a href="mailto:care@doctorsplaza.in">care@doctorsplaza.in</a>
+                </span>
+
+            </div>
+
+            <div class="top-right">
+
+                <span>
+                    <i class="bi bi-clock"></i>
+                    Mon - Sat : 10:00 AM - 7:00 PM
+                </span>
+
+                <span>
+                    <i class="bi bi-instagram"></i>
+                </span>
+
+                <span>
+                    <i class="bi bi-facebook"></i>
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+<nav class="navbar navbar-expand-lg main-navbar">
+
+    <div class="container">
+
+        <a href="#home" class="navbar-brand">
+
+            <div class="brand">
+
+                <div class="brand-icon">
+                    <i class="bi bi-heart-pulse"></i>
+                </div>
+
+                <div>
+
+                    <div class="brand-title">
+                        Dr. Saurabh Prakash
+                    </div>
+
+                    <span class="brand-subtitle">
+                        COMPASSIONATE • TRUSTED • PATIENT FOCUSED
+                    </span>
+
+                </div>
+
+            </div>
+
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#services">
+                        Services
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#approach">
+                        Approach
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#why">
+                        Why Us
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#faq">
+                        FAQs
+                    </a>
+                </li>
+
+                <li class="nav-item ms-lg-2">
+
+                    <a class="nav-link appointment-btn" href="tel:+919910295721">
+                        Book Appointment
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="home">
+
+    <!-- Background circles -->
+
+    <div class="hero-circle circle-one"></div>
+
+    <div class="hero-circle circle-two"></div>
+
+    <div class="hero-circle circle-three"></div>
+
+    <div class="hero-circle circle-four"></div>
+
+
+    <!-- Medical symbols -->
+
+    <div class="medical-plus plus-one">
+        +
+    </div>
+
+    <div class="medical-plus plus-two">
+        +
+    </div>
+
+    <div class="medical-plus plus-three">
+        +
+    </div>
+
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <span class="hero-tag">
+                EXPERT CARE • TRUSTED GUIDANCE
+            </span>
+
+
+            <h1 class="hero-title">
+
+                Better Health
+                <br>
+
+                <span>Begins Here.</span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                Dr. Saurabh Prakash is committed to providing
+                compassionate and patient-focused healthcare.
+                Every consultation focuses on understanding your
+                concerns, providing clear medical guidance and
+                creating a personalized approach to your care.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a href="#appointment" class="btn-main">
+
+                    <i class="bi bi-calendar-check me-2"></i>
+
+                    Book an Appointment
+
+                </a>
+
+
+                <a href="#about" class="btn-outline">
+
+                    Know More About Doctor
+
+                    <i class="bi bi-arrow-right ms-2"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Doctor -->
+
+    <div class="hero-doctor-area">
+
+        <div class="doctor-bg-circle"></div>
+
+        <div class="doctor-bg-ring"></div>
+
+        <img
+            src="images/doctor.png"
+            alt="Dr. Saurabh Prakash"
+            class="doctor-image">
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TRUST CARDS
+========================================================= -->
+
+<section class="trust-section">
+
+    <div class="container">
+
+        <div class="trust-box">
+
+            <div class="row g-0">
+
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="trust-item">
+
+                        <div class="trust-icon">
+
+                            <i class="bi bi-person-heart"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5>
+                                Patient First
+                            </h5>
+
+                            <p>
+                                Your health and comfort
+                                remain our priority.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="trust-item">
+
+                        <div class="trust-icon">
+
+                            <i class="bi bi-heart"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5>
+                                Personalized Care
+                            </h5>
+
+                            <p>
+                                Healthcare designed around
+                                your individual needs.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="trust-item">
+
+                        <div class="trust-icon">
+
+                            <i class="bi bi-shield-check"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5>
+                                Professional Approach
+                            </h5>
+
+                            <p>
+                                Careful assessment and
+                                professional medical guidance.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-3 col-md-6">
+
+                    <div class="trust-item">
+
+                        <div class="trust-icon">
+
+                            <i class="bi bi-activity"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h5>
+                                Complete Care
+                            </h5>
+
+                            <p>
+                                Guidance from consultation
+                                through follow-up.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="section about-section" id="about">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+
+            <div class="col-lg-6">
+
+                <div class="about-image-wrapper">
+
+                    <img
+                        src="images/doctor1.png"
+                        alt="Dr. Saurabh Prakash"
+                        class="about-image">
+
+                    <div class="experience-box">
+
+                        <strong>
+                            Patient
+                        </strong>
+
+                        <span>
+                            Focused Healthcare
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="about-content">
+
+                    <div class="section-label">
+                        ABOUT DR. SAURABH PRAKASH
+                    </div>
+
+
+                    <h2 class="section-title">
+
+                        Compassionate Care.
+                        Personalized Attention.
+
+                    </h2>
+
+
+                    <p class="section-text">
+
+                        Dr. Saurabh Prakash is dedicated to
+                        providing compassionate and patient-focused
+                        healthcare with an emphasis on understanding
+                        every patient's individual concerns.
+
+                    </p>
+
+
+                    <p class="section-text mt-3">
+
+                        Every consultation is approached with
+                        professionalism, clear communication and
+                        genuine care, helping patients understand
+                        their health and make informed decisions.
+
+                    </p>
+
+
+                    <p class="section-text mt-3">
+
+                        The focus is not only on treatment but also
+                        on building trust and creating a comfortable
+                        healthcare experience for every patient.
+
+                    </p>
+
+
+                    <a href="tel:+919910295721" class="btn-main">
+
+                        Book a Consultation
+
+                        <i class="bi bi-arrow-right ms-2"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section class="section services-section" id="services">
+
+    <div class="container">
+
+        <div class="center-heading">
+
+            <div class="section-label">
+                OUR SERVICES
+            </div>
+
+            <h2 class="section-title">
+                Healthcare Designed Around You
+            </h2>
+
+            <p class="section-text">
+
+                From consultation and evaluation to treatment
+                guidance and follow-up care, our approach is
+                centered around your individual healthcare needs.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- Service 1 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+
+                        <i class="bi bi-chat-heart"></i>
+
+                    </div>
+
+                    <h4>
+                        Medical Consultation
+                    </h4>
+
+                    <p>
+
+                        Professional consultation focused on
+                        understanding your health concerns and
+                        providing appropriate medical guidance.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Service 2 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+
+                        <i class="bi bi-search-heart"></i>
+
+                    </div>
+
+                    <h4>
+                        Medical Evaluation
+                    </h4>
+
+                    <p>
+
+                        Careful assessment of symptoms, medical
+                        history and health concerns to support
+                        appropriate clinical decision-making.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Service 3 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+
+                        <i class="bi bi-clipboard2-pulse"></i>
+
+                    </div>
+
+                    <h4>
+                        Personalized Treatment
+                    </h4>
+
+                    <p>
+
+                        Treatment guidance tailored to individual
+                        healthcare requirements and patient needs.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Service 4 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+
+                        <i class="bi bi-arrow-repeat"></i>
+
+                    </div>
+
+                    <h4>
+                        Follow-Up Care
+                    </h4>
+
+                    <p>
+
+                        Continued guidance and monitoring to support
+                        recovery, treatment progress and long-term
+                        health.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Service 5 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+
+                        <i class="bi bi-person-check"></i>
+
+                    </div>
+
+                    <h4>
+                        Patient-Centered Care
+                    </h4>
+
+                    <p>
+
+                        Your concerns, comfort and healthcare goals
+                        remain at the center of every consultation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Service 6 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card">
+
+                    <div class="service-icon">
+
+                        <i class="bi bi-shield-plus"></i>
+
+                    </div>
+
+                    <h4>
+                        Health Guidance
+                    </h4>
+
+                    <p>
+
+                        Clear and practical medical guidance to help
+                        patients better understand their health.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OUR APPROACH
+========================================================= -->
+
+<section class="section" id="approach">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+
+            <div class="col-lg-6">
+
+                <img
+                    src="images/doctor2.png"
+                    alt="Medical consultation"
+                    class="approach-image">
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="ps-lg-5 mt-5 mt-lg-0">
+
+                    <div class="section-label">
+                        OUR APPROACH
+                    </div>
+
+                    <h2 class="section-title">
+
+                        Care That Goes
+                        Beyond Treatment
+
+                    </h2>
+
+
+                    <p class="section-text">
+
+                        Good healthcare begins with listening.
+                        Our approach focuses on understanding
+                        the person behind the symptoms and
+                        providing care that is appropriate to
+                        their individual needs.
+
+                    </p>
+
+
+                    <div class="approach-list">
+
+
+                        <div class="approach-item">
+
+                            <div class="approach-icon">
+
+                                <i class="bi bi-ear"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h5>
+                                    Listen & Understand
+                                </h5>
+
+                                <p>
+
+                                    Understanding your concerns,
+                                    symptoms and medical history.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="approach-item">
+
+                            <div class="approach-icon">
+
+                                <i class="bi bi-clipboard2-check"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h5>
+                                    Evaluate & Assess
+                                </h5>
+
+                                <p>
+
+                                    Careful evaluation to understand
+                                    your healthcare requirements.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="approach-item">
+
+                            <div class="approach-icon">
+
+                                <i class="bi bi-person-heart"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h5>
+                                    Personalized Care
+                                </h5>
+
+                                <p>
+
+                                    Healthcare guidance based on
+                                    your individual needs.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="approach-item">
+
+                            <div class="approach-icon">
+
+                                <i class="bi bi-activity"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h5>
+                                    Follow-Up
+                                </h5>
+
+                                <p>
+
+                                    Continued guidance to support
+                                    your health journey.
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHY CHOOSE US
+========================================================= -->
+
+<section class="section why-section" id="why">
+
+    <div class="container">
+
+        <div class="center-heading">
+
+            <div class="section-label">
+                WHY CHOOSE US
+            </div>
+
+            <h2 class="section-title">
+                Healthcare Built on Trust
+            </h2>
+
+            <p class="section-text">
+
+                Choosing the right healthcare professional is
+                important. Our focus is to make every consultation
+                comfortable, transparent and patient-focused.
+
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="why-card">
+
+                    <div class="why-card-icon">
+                        <i class="bi bi-person-heart"></i>
+                    </div>
+
+                    <h4>
+                        Patient First
+                    </h4>
+
+                    <p>
+
+                        Your health, concerns and comfort remain
+                        at the center of every consultation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="why-card">
+
+                    <div class="why-card-icon">
+                        <i class="bi bi-person-lines-fill"></i>
+                    </div>
+
+                    <h4>
+                        Personalized Attention
+                    </h4>
+
+                    <p>
+
+                        Every patient is different, so healthcare
+                        guidance is tailored to individual needs.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="why-card">
+
+                    <div class="why-card-icon">
+                        <i class="bi bi-award"></i>
+                    </div>
+
+                    <h4>
+                        Professional Care
+                    </h4>
+
+                    <p>
+
+                        A systematic and professional approach
+                        to consultation and healthcare guidance.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="why-card">
+
+                    <div class="why-card-icon">
+                        <i class="bi bi-chat-heart"></i>
+                    </div>
+
+                    <h4>
+                        Clear Communication
+                    </h4>
+
+                    <p>
+
+                        Medical information is explained clearly
+                        to support informed healthcare decisions.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BLUE CTA
+========================================================= -->
+
+<section class="blue-cta" id="appointment">
+
+    <div class="container">
+
+        <div class="cta-content">
+
+            <div class="cta-label">
+                PATIENT-CENTERED CARE
+            </div>
+
+            <h2>
+                Your Health.
+                <br>
+                Our Priority.
+            </h2>
+
+            <p>
+
+                We believe every patient deserves to be heard,
+                understood and treated with care. Take the first
+                step towards better health with professional
+                medical guidance from Dr. Saurabh Prakash.
+
+            </p>
+
+
+            <a href="tel:+919910295721" class="white-btn">
+
+                <i class="bi bi-telephone me-2"></i>
+
+                Book Your Appointment
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PHILOSOPHY
+========================================================= -->
+
+<section class="section philosophy-section">
+
+    <div class="container">
+
+        <div class="section-label">
+            OUR PHILOSOPHY
+        </div>
+
+
+        <div class="quote-icon">
+
+            <i class="bi bi-quote"></i>
+
+        </div>
+
+
+        <div class="quote-text">
+
+            “Good healthcare is not only about treatment.
+            It is about understanding the patient, building
+            trust and providing care that truly fits their needs.”
+
+        </div>
+
+
+        <p class="section-text">
+
+            Understanding, communication and personalized
+            care remain at the heart of every consultation.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FAQ
+========================================================= -->
+
+<section class="section faq-section" id="faq">
+
+    <div class="container">
+
+        <div class="center-heading">
+
+            <div class="section-label">
+                FREQUENTLY ASKED QUESTIONS
+            </div>
+
+            <h2 class="section-title">
+                Common Questions
+            </h2>
+
+        </div>
+
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-9">
+
+
+                <div class="accordion" id="faqAccordion">
+
+
+                    <!-- FAQ 1 -->
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faqOne">
+
+                                How can I book a consultation?
+
+                            </button>
+
+                        </h2>
+
+                        <div
+                            id="faqOne"
+                            class="accordion-collapse collapse show"
+                            data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                You can contact the clinic directly
+                                or use the appointment option on the
+                                website to schedule a consultation.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 2 -->
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faqTwo">
+
+                                What should I bring for my consultation?
+
+                            </button>
+
+                        </h2>
+
+                        <div
+                            id="faqTwo"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Previous medical reports, prescriptions,
+                                diagnostic reports and relevant medical
+                                history can be useful during your consultation.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 3 -->
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faqThree">
+
+                                Do I need an appointment?
+
+                            </button>
+
+                        </h2>
+
+                        <div
+                            id="faqThree"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Appointments are recommended so sufficient
+                                time can be dedicated to understanding
+                                your concerns and healthcare needs.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 4 -->
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faqFour">
+
+                                Can I discuss my existing treatment?
+
+                            </button>
+
+                        </h2>
+
+                        <div
+                            id="faqFour"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                Yes. You can discuss your current
+                                treatment, medications, reports and
+                                health concerns during your consultation.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FAQ 5 -->
+
+                    <div class="accordion-item">
+
+                        <h2 class="accordion-header">
+
+                            <button
+                                class="accordion-button collapsed"
+                                type="button"
+                                data-bs-toggle="collapse"
+                                data-bs-target="#faqFive">
+
+                                How do I know which service is right for me?
+
+                            </button>
+
+                        </h2>
+
+                        <div
+                            id="faqFive"
+                            class="accordion-collapse collapse"
+                            data-bs-parent="#faqAccordion">
+
+                            <div class="accordion-body">
+
+                                During your consultation, your concerns,
+                                symptoms and medical history can be
+                                assessed and appropriate healthcare
+                                guidance can be provided.
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="row g-5">
+
+
+            <!-- About -->
+
+            <div class="col-lg-5">
+
+                <div class="footer-brand">
+                    Dr. Saurabh Prakash
+                </div>
+
+                <p class="footer-about">
+
+                    Compassionate and patient-focused healthcare
+                    with personalized consultation, professional
+                    medical guidance and continued care.
+
+                </p>
+
+
+                <div class="social-links">
+
+                    <a href="https://www.instagram.com/dr.saurabhprakash"
+                        target="_blank">
+
+                        <i class="bi bi-instagram"></i>
+
+                    </a>
+
+                    <a href="#" target="_blank">
+
+                        <i class="bi bi-facebook"></i>
+
+                    </a>
+
+                    <a href="#" target="_blank">
+
+                        <i class="bi bi-linkedin"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <div class="col-lg-2 col-md-4">
+
+                <div class="footer-title">
+                    Quick Links
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#home">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#about">
+                            About
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Services
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#approach">
+                            Approach
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#faq">
+                            FAQs
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Services -->
+
+            <div class="col-lg-2 col-md-4">
+
+                <div class="footer-title">
+                    Services
+                </div>
+
+                <ul class="footer-links">
+
+                    <li>
+                        <a href="#services">
+                            Consultation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Evaluation
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Treatment
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#services">
+                            Follow-Up Care
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <!-- Contact -->
+
+            <div class="col-lg-3 col-md-4">
+
+                <div class="footer-title">
+                    Contact
+                </div>
+
+                <ul class="footer-contact">
+
+                    <li>
+
+                        <i class="bi bi-geo-alt"></i>
+
+                       Rohtak, Haryana
+
+                    </li>
+
+                    <li>
+
+                        <i class="bi bi-telephone"></i>
+
+                        <a href="tel:+919910295721">+91 9910295721</a>
+
+                    </li>
+
+                    <li>
+
+                        <i class="bi bi-envelope"></i>
+
+                        <a href="mailto:care@doctorsplaza.in">care@doctorsplaza.in</a>  
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 Dr. Saurabh Prakash.
+            All Rights Reserved.
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     BOOTSTRAP JS
+========================================================= -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
