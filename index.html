@@ -1430,6 +1430,77 @@ section[id] {
 
 }
 
+        /* =====================================================
+   MOBILE OVERFLOW FIX
+===================================================== */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
+@media (max-width: 767px) {
+
+    * {
+        max-width: 100%;
+    }
+
+    .container,
+    .container-fluid {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .row {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .hero,
+    .section,
+    .main-navbar,
+    footer,
+    .blue-cta {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-title,
+    .hero-description {
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .hero-buttons a {
+        max-width: 100%;
+    }
+
+    .treatment-card,
+    .service-card,
+    .why-card,
+    .trust-box {
+        max-width: 100%;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
 </style>
 
 </head>
