@@ -1263,6 +1263,90 @@
         margin-right: 6px;
     }
 
+        /* =====================================================
+   FINAL NAVBAR SCROLL FIX
+===================================================== */
+
+.main-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    background: #ffffff;
+    overflow: visible;
+}
+
+/* Navbar container should never get clipped */
+.main-navbar .container {
+    position: relative;
+    overflow: visible;
+}
+
+/* Keep logo completely inside navbar */
+.main-navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-navbar .brand {
+    display: flex;
+    align-items: center;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+
+    .main-navbar {
+        position: sticky;
+        top: 0;
+        z-index: 9999;
+        padding: 10px 0;
+    }
+
+    .main-navbar .container {
+        min-height: 50px;
+        align-items: center;
+    }
+
+    .navbar-brand {
+        position: relative;
+        top: 0;
+    }
+
+    .brand-icon {
+        flex-shrink: 0;
+    }
+
+    .navbar-toggler {
+        position: relative;
+        top: 0;
+        flex-shrink: 0;
+    }
+
+    .navbar-collapse {
+        position: relative;
+        width: 100%;
+    }
+}
+
+
+/* =====================================================
+   ANCHOR SCROLL FIX
+   Prevent sections from going underneath navbar
+===================================================== */
+
+section[id] {
+    scroll-margin-top: 75px;
+}
+
+@media (max-width: 991px) {
+    section[id] {
+        scroll-margin-top: 65px;
+    }
+}
+
 </style>
 
 </head>
