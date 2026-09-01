@@ -169,40 +169,7 @@
             background: var(--primary-dark);
         }
 
-        /* Extra small phones */
-@media (max-width: 575px) {
-
-    .main-navbar {
-        padding: 9px 0;
-    }
-
-    .main-navbar > .container {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    .brand-icon {
-        width: 40px;
-        height: 40px;
-        min-width: 40px;
-        font-size: 19px;
-    }
-
-    .brand-title {
-        font-size: 16px;
-    }
-
-    .brand-subtitle {
-        font-size: 6px;
-        letter-spacing: 0.65px;
-    }
-
-    .navbar-toggler {
-        margin-left: 8px;
-        padding: 5px 8px;
-    }
-}
-
+    
 
         /* =====================================================
            HERO
@@ -1164,6 +1131,128 @@ span a i {
     }
 }
 
+        /* =========================================
+   NAVBAR - MOBILE FIX
+========================================= */
+
+@media (max-width: 991px) {
+
+    .main-navbar {
+        padding: 10px 0;
+    }
+
+    .main-navbar > .container {
+        display: flex;
+        flex-wrap: nowrap !important;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        margin: 0;
+        padding: 0;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        min-width: 0;
+    }
+
+    .brand-icon {
+        width: 42px;
+        height: 42px;
+        min-width: 42px;
+        font-size: 20px;
+    }
+
+    .brand-title {
+        font-size: 17px;
+        line-height: 1.15;
+        white-space: nowrap;
+    }
+
+    .brand-subtitle {
+        font-size: 6.5px;
+        letter-spacing: 0.8px;
+        white-space: nowrap;
+    }
+
+    .navbar-toggler {
+        display: block;
+        flex: 0 0 auto;
+        margin-left: 10px;
+        padding: 6px 9px;
+        border: 1px solid #d7e4e9;
+        border-radius: 5px;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    .navbar-nav {
+        gap: 0;
+        padding-top: 10px;
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+
+    .appointment-btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 6px;
+    }
+}
+
+
+/* Extra small phones */
+@media (max-width: 575px) {
+
+    .main-navbar {
+        padding: 9px 0;
+    }
+
+    .main-navbar > .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .brand-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        font-size: 19px;
+    }
+
+    .brand-title {
+        font-size: 16px;
+    }
+
+    .brand-subtitle {
+        font-size: 6px;
+        letter-spacing: 0.65px;
+    }
+
+    .navbar-toggler {
+        margin-left: 8px;
+        padding: 5px 8px;
+    }
+}
 
     </style>
 
