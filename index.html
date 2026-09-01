@@ -1440,6 +1440,129 @@ section[id] {
     }
 }
 
+         /* =====================================================
+   FINAL SCROLL + STICKY NAVBAR FIX
+===================================================== */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Navbar stays in normal document flow */
+.main-navbar {
+    position: sticky !important;
+    top: 0 !important;
+    width: 100%;
+    z-index: 9999 !important;
+    background: #ffffff !important;
+}
+
+/* Don't clip navbar */
+.main-navbar,
+.main-navbar .container {
+    overflow: visible !important;
+}
+
+/* Anchor sections don't hide behind navbar */
+section[id] {
+    scroll-margin-top: 80px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 991px) {
+
+    html {
+        scroll-padding-top: 65px;
+    }
+
+    .main-navbar {
+        position: sticky !important;
+        top: 0 !important;
+        padding: 10px 0 !important;
+    }
+
+    .main-navbar > .container {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        margin: 0 !important;
+        padding: 0 !important;
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .brand {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px;
+    }
+
+    .brand-icon {
+        flex-shrink: 0;
+    }
+
+    .navbar-toggler {
+        display: block !important;
+        flex-shrink: 0;
+        margin-left: 8px;
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        flex-basis: 100%;
+    }
+
+    section[id] {
+        scroll-margin-top: 65px;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 575px) {
+
+    html {
+        scroll-padding-top: 60px;
+    }
+
+    .main-navbar > .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .brand-title {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .brand-subtitle {
+        font-size: 6px;
+        white-space: nowrap;
+    }
+
+    .brand-icon {
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+    }
+
+    section[id] {
+        scroll-margin-top: 60px;
+    }
+}
+
 </style>
 
 </head>
