@@ -21,6 +21,10 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
 
+    <!-- Font Awesome CDN -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <style>
 
     /* =====================================================
@@ -1347,6 +1351,85 @@ section[id] {
     }
 }
 
+
+        /* =====================================================
+   COMMON TREATMENTS
+===================================================== */
+
+.treatments-section {
+    background: #ffffff;
+}
+
+.treatment-card {
+    height: 100%;
+    background: #ffffff;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 30px 25px;
+    transition: 0.3s ease;
+}
+
+.treatment-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(15, 80, 105, 0.10);
+}
+
+.treatment-icon {
+    width: 58px;
+    height: 58px;
+    background: var(--light);
+    color: var(--primary);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.treatment-card h4 {
+    color: #173c57;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.treatment-card p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+
+/* =====================================================
+   COMMON TREATMENTS - MOBILE
+===================================================== */
+
+@media (max-width: 767px) {
+
+    .treatment-card {
+        padding: 25px 22px;
+    }
+
+    .treatment-icon {
+        width: 52px;
+        height: 52px;
+        font-size: 21px;
+    }
+
+    .treatment-card h4 {
+        font-size: 15px;
+    }
+
+    .treatment-card p {
+        font-size: 11px;
+    }
+
+}
+
 </style>
 
 </head>
@@ -2063,7 +2146,209 @@ section[id] {
 
 </section>
 
+<!-- =========================
+     COMMON TREATMENTS
+========================= -->
 
+<section class="section treatments-section" id="treatments">
+
+    <div class="container">
+
+        <div class="center-heading">
+
+            <div class="section-label">
+                COMMON TREATMENTS
+            </div>
+
+            <h2 class="section-title">
+                Common Treatments & Care
+            </h2>
+
+            <p class="section-text">
+                Medical consultation and ongoing care for common health
+                conditions affecting adults.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- Diabetes -->
+            <div class="col-lg-4 col-md-6">
+                <div class="treatment-card">
+
+                    <div class="treatment-icon">
+                        <i class="fa-solid fa-droplet"></i>
+                    </div>
+
+                    <h4>Diabetes Management</h4>
+
+                    <p>
+                        Comprehensive care for blood sugar control,
+                        diabetes management and long-term health.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Hypertension -->
+            <div class="col-lg-4 col-md-6">
+                <div class="treatment-card">
+
+                    <div class="treatment-icon">
+                        <i class="fa-solid fa-heart-pulse"></i>
+                    </div>
+
+                    <h4>Hypertension Management</h4>
+
+                    <p>
+                        Assessment and ongoing management of high blood
+                        pressure and cardiovascular risk.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Kidney Disease -->
+            <div class="col-lg-4 col-md-6">
+                <div class="treatment-card">
+
+                    <div class="treatment-icon">
+                        <i class="fa-solid fa-hospital"></i>
+                    </div>
+
+                    <h4>Kidney Disease Care</h4>
+
+                    <p>
+                        Medical evaluation and guidance for kidney health
+                        and related conditions.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Fever -->
+            <div class="col-lg-4 col-md-6">
+                <div class="treatment-card">
+
+                    <div class="treatment-icon">
+                        <i class="fa-solid fa-temperature-high"></i>
+                    </div>
+
+                    <h4>Fever & Infections</h4>
+
+                    <p>
+                        Evaluation and treatment of fever, infections
+                        and common illnesses.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Respiratory -->
+            <div class="col-lg-4 col-md-6">
+                <div class="treatment-card">
+
+                    <div class="treatment-icon">
+                        <i class="fa-solid fa-lungs"></i>
+                    </div>
+
+                    <h4>Respiratory Problems</h4>
+
+                    <p>
+                        Care for cough, breathing difficulties and
+                        other common respiratory problems.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Thyroid -->
+            <div class="col-lg-4 col-md-6">
+                <div class="treatment-card">
+
+                    <div class="treatment-icon">
+                        <i class="fa-solid fa-user-doctor"></i>
+                    </div>
+
+                    <h4>Thyroid Disorders</h4>
+
+                    <p>
+                        Assessment and management of common thyroid
+                        disorders and hormonal concerns.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Liver -->
+            <div class="col-lg-4 col-md-6">
+                <div class="treatment-card">
+
+                    <div class="treatment-icon">
+                        <i class="fa-solid fa-notes-medical"></i>
+                    </div>
+
+                    <h4>Liver Disease Care</h4>
+
+                    <p>
+                        Medical evaluation and guidance for liver health
+                        and related conditions.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- Joint Pain -->
+            <div class="col-lg-4 col-md-6">
+                <div class="treatment-card">
+
+                    <div class="treatment-icon">
+                        <i class="fa-solid fa-bone"></i>
+                    </div>
+
+                    <h4>Joint & Muscle Pain</h4>
+
+                    <p>
+                        Assessment and treatment guidance for joint,
+                        muscle and mobility-related problems.
+                    </p>
+
+                </div>
+            </div>
+
+
+            <!-- General Health -->
+            <div class="col-lg-4 col-md-6">
+                <div class="treatment-card">
+
+                    <div class="treatment-icon">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+
+                    <h4>General Health Care</h4>
+
+                    <p>
+                        Professional medical consultation focused on
+                        prevention, diagnosis and ongoing care.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 <!-- =========================================================
      OUR APPROACH
